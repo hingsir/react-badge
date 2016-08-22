@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Badge sample</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        *{
+            margin: 0; padding: 0; list-style: none;
+        }
+        body{
+            font-size: 14px;
+            background: #f6f6f6;
+        }
+        .clearfix:after {
+            content:"\200B";
+            display:block;
+            height:0;
+            clear:both;
+        }
+        main{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 60px;
+        }
+        footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-top: 1px solid #ccc;
+            background: #fff;
+        }
+        footer ul li{
+            float: left;
+            width: 33.33333%;
+            line-height: 60px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        footer ul li span{
+            position: absolute;
+            top: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <main></main>
+    <footer>
+        <ul class="clearfix">
+            <li>消息<span id="msg-badge"></span></li>
+            <li>联系人<span id="friend-badge"></span></li>
+            <li>动态<span id="feed-badge"></span></li>
+        </ul>
+    </footer>
+<script type="text/javascript" src="./bundle.js"></script></body>
+</html>
