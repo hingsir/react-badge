@@ -6,21 +6,27 @@ import ReactDOM from 'react-dom';
 import Badge from '../index';
 
 let onRemoved = (inst) => {
-    console.log(inst)
-    alert('onremoved callback')
+    console.log(inst);
+    alert('onremoved callback');
 }
 
-ReactDOM.render((
-    <Badge count={8} onRemoved={onRemoved}>
-    </Badge>
-), document.getElementById('msg-badge'));
+const App = (props) => (
+    <div>
+        <main></main>
+        <footer>
+            <ul class="clearfix">
+                <li>消息<span id="msg-badge">
+                    <Badge count={8} onRemoved={onRemoved}></Badge>
+                </span></li>
+                <li>联系人<span id="friend-badge">
+                    <Badge count={100} onRemoved={onRemoved}></Badge>
+                </span></li>
+                <li>动态<span id="feed-badge">
+                    <Badge dot={true}></Badge>
+                </span></li>
+            </ul>
+        </footer>
+    </div>
+)
 
-ReactDOM.render((
-    <Badge count={100} onRemoved={onRemoved}>
-    </Badge>
-), document.getElementById('friend-badge'));
-
-ReactDOM.render((
-    <Badge dot={true}>
-    </Badge>
-), document.getElementById('feed-badge'));
+ReactDOM.render(<App/>, document.getElementById('container'));

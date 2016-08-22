@@ -17,4 +17,4 @@ ReactDOM.render((
 
 **扫一扫看[demo](http://hingsir.com/react-badge/dist/index.html)**
 
-![二维码](example/badge.jpeg)
+![二维码](example/badge.png)
